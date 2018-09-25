@@ -13,7 +13,7 @@ Daarnaast gebruiken we data van PDOK en bestaande achtergrond kaarten van CartoD
 ## 1. Voorbereiding.
 
 1. Open Qgis en start een lege kaart.  **Project > New**
-4. Sla het project op in je werk folder. Zorg dat je regelmatig op `Opslaan [Ctrl+S]` drukt tijdens de workshop.
+4. Sla het project op in je werk folder. Zorg ervoor dat je regelmatig op `Opslaan [Ctrl+S]` drukt tijdens de workshop.
 2. Zet de layer styling panel klaar. **View > Panels > Layer styling** Verplaats het naar de rechterkant van je scherm. Of druk F7.
 3. Installeer de volgende plug-ins :
     * QuickMapServices
@@ -106,20 +106,21 @@ Je ziet nu de landsgrens van Nederland op de kaart!
 5. Selecteer de landsgrens laag in de **Layers** paneel aan de linker kant van het scherm.  De **Layer Styling** paneel aan de rechterkant van het scherm is nu gericht op de landsgrens laag. Zie je de naam boven in staan? Je kan hier ook kiezen welke laag je wilt stijlen. 
 
 6. Klik op het Dropdown menu waar nu `Single Symbol` staat en kies nu `Inverted Polygons`.
-6. Klik op `Simple fill` en zet de `Fill Color` naar wit.
+7. Klik op `Simple fill` en zet de `Fill Color` naar wit.
+8. Zet de  `Stroke style` op `No pen`
 
 ### Draw Effects!
 We gaan nu de **Draw Effects** ontdekken. Let op waar je een effect op zet. Je kan deze op de laag zetten, op een feature zetten maar ook op verschillende onderdelen van de feature. 
 
-7. Vink de `Draw Effects` aan en klik op de knop. 
+9. Vink de `Draw Effects` aan en klik op de knop. 
 
 ![](./img/draw_effects.png)
 
 Per feature style kan je extra laagjes met effecten toevoegen. Zoals schaduwen en glows. We willen de witte source laag wel doorzichtig hebben maar de schaduw die we straks gaan toevoegen niet. Let op, als je de hele Layer een opacity geeft geld dit dus ook voor de schaduw die daarbij hoort. Zet je de Feature opacity dan gebeurt hetzelfde. Daarom gaan we hier eerst de Source aanpassen. 
 
-8. Zet de Source opacity op 15%. Dit zorgt ervoor dat alleen de source laag doorzichtig wordt!
-9. Voeg een Inner Shadow toe door het vinkje ervoor aan te zetten. Zorg dat deze BOVEN de Source staat in het lijstje. Deze schaduw heeft een opacity van 50%.  
-10. Geef de Inner Shadow een lichtgrijze kleur en een grootte van 1 mm. 
+10. Zet de Source opacity op 15%. Dit zorgt ervoor dat alleen de source laag doorzichtig wordt!
+11. Voeg een Inner Shadow toe door het vinkje ervoor aan te zetten. Zorg dat deze BOVEN de Source staat in het lijstje. Deze schaduw heeft een opacity van 50%.  
+12. Geef de Inner Shadow een lichtgrijze kleur en een grootte van 1 mm. 
 
 ![](./img/draw_effect_1.png)
 
@@ -130,7 +131,7 @@ De kaart ziet er nu ongeveer zo uit:
 
 Misschien is de achtergrond kaart nu zelfs iets te licht geworden. Laten we de Brightness maar weer terug zetten naar de default waarden. 
 
-12. Selecteer de Basemap layer en zet de Brightness terug op 0. 
+13. Selecteer de Basemap layer en zet de Brightness terug op 0. 
 
 **Ben creatief! Dit effectje kan je natuurlijk ook op de BRT achtergrond kaart uithalen:**
 
