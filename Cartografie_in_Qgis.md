@@ -18,7 +18,7 @@ Daarnaast gebruiken we data van PDOK en bestaande achtergrond kaarten van CartoD
 3. Installeer de volgende plug-ins :
     * QuickMapServices
     * PDOK Services Plugin
-    * Vector Tile Reader
+    * Vector Tiles Reader
 
 **Plugins > Manage and Install Plugins > Search .. > Install Plugin**
 
@@ -132,6 +132,9 @@ Misschien is de achtergrond kaart nu zelfs iets te licht geworden. Laten we de B
 
 12. Selecteer de Basemap layer en zet de Brightness terug op 0. 
 
+**Ben creatief! Dit effectje kan je natuurlijk ook op de BRT achtergrond kaart uithalen:**
+
+![](./img/brt_achtergrond.png)
 
 ## 4. Thematische data van CBS 
 
@@ -151,10 +154,17 @@ In plaats van de gemeenten grenzen willen we een punt per gemeenten.
 
 ### Grootte marker gebaseerd op oppervlakte.
 
-9. Selecteer de `Marker`
+9. Selecteer de `Marker`.
+
 De grootte van de cirkels willen we op de oppervlakte van de gemeenten zetten. 
+
 10. Klik op het extra menu naast de `Size` en kies `Edit...`
-11. Voer in : 
+
+![](./img/marker_size.png)
+
+Er open zich nu een Expression String Builder venster waar wij zelf kunnen berekenen hoe groot we de cirkel willen hebben op basis van de data.
+
+11. Voer links de volgende code in: 
 
         CASE
         WHEN ("oppervlakte_land_in_ha"= -99999999)
@@ -165,12 +175,15 @@ De grootte van de cirkels willen we op de oppervlakte van de gemeenten zetten.
 Met de `CASE WHEN .. THEN .. ELSE .. END` statment halen we de Null waarden in de tabel eruit. 
 "oppervlakte_land_in_ha" is een attribuut van de data. `46005` is de maximum oppervlakte die voorkomt in de data. Daardoor worden de waarden tussen de 0 en 1 geschaald. Punten schalen tussen 0 en 1 is een beetje te klein, daarom x 10. Zo wordt de groote van de cirkel geschaald tussen 1 en 10.
 
-### Slag schaduw toevoegen. 
+10. Selecteer de `Simple Marker` in de **Style Layers** paneel. 
+11. Zet de **Stroke Style** op **No Pen**
+10. Helemaal onderaan vind je de knop voor **Draw Effects**. Scroll dus helemaal omlaag. 
+11. Activeer deze en ga naar de Draw Effects. 
 
+![](./img/draw_effects.png)
 
-9. Selecteer de `Marker` in de **Style Layers** paneel. 
-10. Helemaal onderaan vind je de knop voor **Draw Effects**
-
+12. Activeer de **Drop Shadow**
+13. Zet de grootte op 2 pixels en de blur op 3. 
 
 ### Kleur op aantal inwoners 
 
@@ -198,14 +211,15 @@ Zoals je ziet verknallen de -99999999 waarden in de data behoorlijk de visualisa
 
 6. Klik in de **Layer Styling** paneel opnieuw op `Classify`.
 
-Nu zijn de bollen zowel in groote als in kleur aangepast op de data! 
+Nu zijn de bollen zowel in groote als in kleur aangepast op de data! Het zou er nu ongeveer zo uit moeten zien:
 
-![](./img/bollen.png)
-
-
+![](./img/voorbeeld_2.png)
 
 
 
+
+
+<!-- 
 ### Data inladen.
 
 Voeg de volgende laag toe aan het project:
@@ -235,8 +249,8 @@ Er open zich nu een Expression String Builder venster waar wij zelf kunnen berek
 5. Kijk wat er gebeurt als je de waardes veranderd! 
 
 ![](./img/layer_rendering.png)
+ -->
 
-### Live Layer Effects!!
 
 
 
