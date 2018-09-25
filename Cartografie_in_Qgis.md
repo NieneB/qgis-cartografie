@@ -14,13 +14,36 @@ Daarnaast gebruiken we data van PDOK en bestaande achtergrond kaarten van CartoD
 
 1. Open Qgis en start een lege kaart.  **Project > New**
 4. Sla het project op in je werk folder. Zorg dat je regelmatig op `Opslaan [Ctrl+S]` drukt tijdens de workshop.
-2. Zet de layer styling panel klaar. **View > Panels > Layer styling** Verplaats het naar de rechterkant van je scherm. 
+2. Zet de layer styling panel klaar. **View > Panels > Layer styling** Verplaats het naar de rechterkant van je scherm. Of druk F7.
 3. Installeer de volgende plug-ins :
     * QuickMapServices
     * PDOK Services Plugin
     * Vector Tile Reader
 
 **Plugins > Manage and Install Plugins > Search .. > Install Plugin**
+
+## 1. Live Interactive Styling in QGis 3! 
+
+Een nieuwe feature in Qgis 3 is de Layer Styling Dock. Waardoor je direct kan zien wat de instellingen doen met visuele weergave van je data. Ook hoef je niet elke keer de properties van een laag te openen en te sluiten. De Layer Styling Dock past zich direct aan op de laag waar je mee werkt.
+
+
+
+* Bovenaan kun je de laag selecteren die je wilt stijlen. 
+
+* De tabs die beschikbaar zijn:
+    - Stijl opties
+    - Label opties
+    - Stijl opslaan
+    - Undo
+
+* Onderaan in het blauw de mogelijkheid om de live rendering aan en uit te zetten.
+
+* In het groen bovenaan, de stijling van de Features. 
+* In het groen onderaan, de stijling op de Layer. 
+
+![](./img/layer_styling.png)
+
+Voor deze workshop laten we dit paneel altijd op de voorgrond staan en we zullen hier het meest mee bezig zijn.
 
 ## 2. QuickMapServices Achtergrondkaart
 
@@ -83,11 +106,19 @@ Je ziet nu de landsgrens van Nederland op de kaart!
 5. Selecteer de landsgrens laag in de **Layers** paneel aan de linker kant van het scherm.  De **Layer Styling** paneel aan de rechterkant van het scherm is nu gericht op de landsgrens laag. Zie je de naam boven in staan? Je kan hier ook kiezen welke laag je wilt stijlen. 
 
 6. Klik op het Dropdown menu waar nu `Single Symbol` staat en kies nu `Inverted Polygons`.
-6. Klik op `Simple fill` en zet de `Fill Color` naar wit.  
-7. Ga naar de `Draw Effects`!
+6. Klik op `Simple fill` en zet de `Fill Color` naar wit.
 
-8. Zet de Source opacity op 15%.
-9. Voeg een Inner Shadow toe en zorg dat deze BOVEN de Source komt te staan. 
+### Draw Effects!
+We gaan nu de **Draw Effects** ontdekken. Let op waar je een effect op zet. Je kan deze op de laag zetten, op een feature zetten maar ook op verschillende onderdelen van de feature. 
+
+7. Vink de `Draw Effects` aan en klik op de knop. 
+
+![](./img/draw_effects.png)
+
+Per feature style kan je extra laagjes met effecten toevoegen. Zoals schaduwen en glows. We willen de witte source laag wel doorzichtig hebben maar de schaduw die we straks gaan toevoegen niet. Let op, als je de hele Layer een opacity geeft geld dit dus ook voor de schaduw die daarbij hoort. Zet je de Feature opacity dan gebeurt hetzelfde. Daarom gaan we hier eerst de Source aanpassen. 
+
+8. Zet de Source opacity op 15%. Dit zorgt ervoor dat alleen de source laag doorzichtig wordt!
+9. Voeg een Inner Shadow toe door het vinkje ervoor aan te zetten. Zorg dat deze BOVEN de Source staat in het lijstje. Deze schaduw heeft een opacity van 50%.  
 10. Geef de Inner Shadow een lichtgrijze kleur en een grootte van 1 mm. 
 
 ![](./img/draw_effect_1.png)
@@ -118,6 +149,8 @@ In plaats van de gemeenten grenzen willen we een punt per gemeenten.
 
 ![](./img/gemeenten.png)
 
+### Grootte marker gebaseerd op oppervlakte.
+
 9. Selecteer de `Marker`
 De grootte van de cirkels willen we op de oppervlakte van de gemeenten zetten. 
 10. Klik op het extra menu naast de `Size` en kies `Edit...`
@@ -131,6 +164,15 @@ De grootte van de cirkels willen we op de oppervlakte van de gemeenten zetten.
 
 Met de `CASE WHEN .. THEN .. ELSE .. END` statment halen we de Null waarden in de tabel eruit. 
 "oppervlakte_land_in_ha" is een attribuut van de data. `46005` is de maximum oppervlakte die voorkomt in de data. Daardoor worden de waarden tussen de 0 en 1 geschaald. Punten schalen tussen 0 en 1 is een beetje te klein, daarom x 10. Zo wordt de groote van de cirkel geschaald tussen 1 en 10.
+
+### Slag schaduw toevoegen. 
+
+
+9. Selecteer de `Marker` in de **Style Layers** paneel. 
+10. Helemaal onderaan vind je de knop voor **Draw Effects**
+
+
+### Kleur op aantal inwoners 
 
 Nu gaan we de cirkels data gedreven kleuren. In plaats van Single Symbol kiezen we voor Graduated boven in het drop down menu. 
 
