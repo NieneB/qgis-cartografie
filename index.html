@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/niene.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="img/ducks2.png">
+					<section>
+						<h1>Workshop Cartografie in <img src="img/QGIS_logo,_2017.png"/> </h1>
+						<h4>Beyond Bertin</h4>
+						<h2 style="margin: 0 0 40px 0;"></h2>
+						<h3 style="margin: 0 0 0 0;">Niene Boeijen</h3>
+					</section>
+					<section>
+						<p>This presentation and materials:</p>
+						<h2 style="text-transform: initial;"><a href="https://github.com/NieneB/qgis-cartografie">github.com/NieneB/qgis-cartografie</a></h2>
+					</section>
+				</section>
+				<!-- All about me me me ! -->
+				<section data-background="img/basiskaart_zw_42000.png">
+					<section>
+						<h1>About me</h1>
+					</section>
+					<section>
+						<div style="float:right; width:50%;">
+							<a href="http://webmapper.net"><img src="img/webmapper_logo_tekst.png" height="100px"> </a>
+							<br/>
+							<a href="http://maptime.io"><img src="img/maptimeAMS.png" height="130px"></a>
+							<br/>
+							<a href="https://waag.org/en/users/niene-boeijen"><img src="img/WS_logo.jpg" height="100px"></a>
+							<br/>
+							<br/>
+							<img src="img/wur.jpg" height="50px">
+						</div>
+						<div style="float:left; width: 50%;">
+							<p>Web Cartographer & Geo ICT developer</p>
+							<br/>
+							<p> Event Organizer: Maptime <a href="https://www.meetup.com/Maptime-AMS">Amsterdam</a> & <a href="https://www.meetup.com/Maptime030-Utrecht/">Utrecht</a></p>
+							<br/>
+							<p>Internship Geo Web Visualization<a href="http://nieneb.github.io/verstedelijking/">[1]</a>
+								<br/>
+								<a href="http://nieneb.github.io/TopoNamen/">[2] </a> <a href="http://nieneb.github.io/InternshipReport/">[3]</a></p>
+							<br/>
+							<p>Msc Geo Information Science & Remote Sensing <a href="http://nieneb.github.io/ThesisPresentation/#/">[1]</a></p>
+						</div>
+					</section>
+					<section data-background="img/versie_2_web_1260.png" data-background-size=80%>
+						<!-- <blockquote class="fragment fade-up"> 
+										<p>Our expertise is open {source; data; standards} </p>
+										<p>Our power lies in combining cartography, webtechnology with geo.</p>
+										<p>Utrecht, The Netherlands</p>
+									</blockquote> -->
+					</section>
+					<section>
+				
+						<div style="float:top; width:100%">
+							<blockquote>
+								<i><p>We make interactive maps and visualizations.</p></i>
+							</blockquote>
+						</div>
+						<div style="float:bottom; width:100%;">
+							<a href="http://apps.webmapper.nl/gebouwen/"><img src="img/webmapper.gif" width="49%" /></a>
+							<a href="http://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/"><img src="img/pdok_vt_viewer.gif"
+								 width="49%" /></a>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Doel van deze 2,5 uur</h1> 
+					
+					</section>
+					<section>
+						<h2>Theorie naast Qgis functionaliteit</h2>
+
+					</section>
+				</section>
+				<section>
+					<section>
+						<img src="img/chain.jpg"/>
+					</section>
+					<section>
+						<img src="img/visual_thinking_communication.png"/>
+					</section>
+					<section>
+						<h1>Tool</h1>
+						<h2>Vandaag Qgis</h2>
+						<h2>kenmerken</h2>
+						<ul>
+							<li>static</li>
+							<li>Zoom level dependent</li>
+							<li>print</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>Punt</li>
+							<li	>Lijn</li>
+							<li>Polygon</li>
+							<li class="fragment shrink">Raster</li>
+						</ul>
+						<p class="fragment appear">Een polygoon hoeft geen polygoon te zijn, een lijn geen lijn, een punt geen punt...</p>
+					</section>
+					<section>
+						<img src="img/symbol_layer_type.png"/>
+					</section>
+					<section>
+						<div style="float: left; width:50%;" >
+						<p>polygon</p>
+						<img src="img/symbol_type.png"/>
+						</div>
+						<p>line</p>
+						<img src="img/symbol_type_line.png" />
+						<p>punt</p>
+						<img src="img/symbol_type_point.png" />
+
+					</section>
+					<section>
+						<img src="img/line_marker.png"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Meet Niveaus</h1>
+						<ul>
+							<li>
+								kwalitatief
+								<ul>
+									<li>Nominaal</li>
+									<li>Ordinaal</li>
+								</ul>
+							</li>
+							<li>
+								Kwantitatief
+								<ul>
+									<li>Interval</li>
+									<li>Ratio</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<img src="img/meetniveau.png"/>
+					</section>
+					<section>
+						<img src="img/categorie.png"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1> Cartografie?!</h1>
+						<ul>
+							<li>Grafisch & Cartografisch ontwerp</li>
+							<li>UX design</li>
+							<li>Film thropes storytelling concepten</li>
+							<li>Gestalt</li>
+						</ul>
+					</section>
+					<section>
+						<h1></h1>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Hard Core tips! </h1>
+					</section>
+					<section> <h1>1. Gebruik Géén Defaults!</h1></section>
+					<section><h1>2. Een kaart is méér dan alleen de kaart. Alles eromheen verteld ook het verhaal.</h1></section>
+					<section><h1>2. Een polygoon hoeft geen polygoon te zijn, een lijn geen lijn, een punt geen punt... </h1></section>
+
+				</section>
+
+			</div>
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'reveal.js/plugin/markdown/marked.js' },
+					{ src: 'reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
