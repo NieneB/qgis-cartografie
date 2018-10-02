@@ -18,7 +18,6 @@ Daarnaast gebruiken we data van PDOK en bestaande achtergrond kaarten van CartoD
 3. Installeer de volgende plug-ins :
     * QuickMapServices
     * PDOK Services Plugin
-    * Vector Tiles Reader
 
 **Plugins > Manage and Install Plugins > Search .. > Install Plugin**
 

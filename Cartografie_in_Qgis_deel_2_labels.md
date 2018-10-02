@@ -8,6 +8,8 @@ Voeg nog een keer de gemeenten grenzen toe aan het project en zet de oude laag u
 
 Speel met deze waarden als je wilt, zodat je mooie subtiele gemeenten grenzen hebt. 
 
+Je zou dit effect ook kunnen doen door in plaats van een **Simple Fill** te kiezen voor **Outline: Simple line**. Probeer maar eens uit. De polygonen worden dan niet als vlakken maar als lijnen getekend.
+
 4. Ga naar de Label tab! Dit is de tweede tab aan de linkerzijde op het **Layer styling** paneel. 
 
 ![](./img/tabs.png)
@@ -40,9 +42,10 @@ Hier kunnen we de grootte van het font laten afhangen van een waarde in de data!
 6. Zelfs de curve van de interpolatie kan je aanpassen! 
 
 7. Ga naar de tab **Placement**
+
 ![](./img/placement.png)
 
-8. Zet dezelfde settings in. 
+8. Zet dezelfde settings in als in het plaatje hierboven. 
 9. Ga naar de tab **Rendering**
 
 ![](./img/rendering.png)
@@ -77,6 +80,7 @@ Niet echt mooi of optimaal. Een reden hiervoor is, is dat de gemeenten data set 
 ## Labels versie 2
 
 7. Ga naar de tab **Placement**
+
 ![](./img/placement.png)
 
 8. Zet de **Placement** op **Using Perimeter(curved)**
