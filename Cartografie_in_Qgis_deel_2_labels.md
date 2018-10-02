@@ -1,6 +1,4 @@
-
-
-## Labels
+# Labels
 
 Voeg nog een keer de gemeenten grenzen toe aan het project en zet de oude laag uit. We gaan kijken naar de gemeenten naam labels! 
 
@@ -76,7 +74,7 @@ Niet echt mooi of optimaal. Een reden hiervoor is, is dat de gemeenten data set 
 *Uitdaging*: speel met de settings tot je wel tevreden bent! 
 
 
-## Labels 2
+## Labels versie 2
 
 7. Ga naar de tab **Placement**
 ![](./img/placement.png)
@@ -85,3 +83,31 @@ Niet echt mooi of optimaal. Een reden hiervoor is, is dat de gemeenten data set 
 9. **Allowed Positions** op **Right of line**
 10. Vink de **Line orientation dependent position** aan.
 11. Zet **Repeat** op 1000 **Map Units**
+
+12. Zet de grootte van de text weer op 1 soort grootte. 
+
+## Handmatig plaatsen van labels
+
+Een nieuwe functie van Qgis 3 is het handmatig plaatsen van labels:
+
+![](./img/label_placement.png)
+
+Als je deze toolbar niet ziet ga dan naar:
+
+View > Toolbars > Label Toolbar
+
+From [Stack](https://gis.stackexchange.com/questions/67408/how-does-manual-label-placement-in-qgis-1-9-work/67546#67546)
+
+* **Highlight Pinned Labels:** Shows or hides a shaded 'outline' box around the labels that have been manually moved. Highlight is cyan when layer is not editable, and green when editable.
+
+* **Pin/Unpin Labels:** Changes a label from 'auto' label settings to manual label settings. This will remove all rotation, and change the position of the label. You must then manually set this using the move and rotate tools. Note: Layer must be editable for this tool to be active.
+
+* **Show/Hide Labels:** Displays (Click) or hides (Shift-Click) the label for the feature you click. Note: Layer must be editable for this tool to be active. Note 2: Layer must have a data defined column set for visibility for this tool to be active. To do this, create an integer column (named "visibility' for example), and assign it in the label properties under Rendering > Show Label > YourColumnName
+
+* **Move Label:** Allows you to change the position of the label. Changing the position will "Pin" the label as well. This will remove all rotation, and change the position of the label. Note: Layer must be editable for this tool to be active. Note 2: Layer must have a data defined column set for x and y position for this tool to be active. To do this, create 2 'double' (aka decimal or real) columns (named "LabelX" and "LabelY" for example), and assign them in the label properties under Placement > Data Defined > X and Y
+
+* **Rotate Label:** Allows you to change the rotation of the label. You must first "Pin" the label before you can rotate it. Note: Layer must be editable for this tool to be active. Note 2: Layer must have a data defined column set for Rotation for this tool to be active. To do this, create a 'double' (aka decimal or real) column (named "Rotation" for example), and assign it in the label properties under Placement > Data Defined > Rotation
+
+* **Change Label:** Brings up additional options to change the particular label you clicked. Here you can set things such as the specific font/size/colour, buffers, etc. These all need to have their own columns defined, and the label properties set to use them as 'data defined' fields.
+
+Probeer wat labels op een betere plaats te krijgen!
