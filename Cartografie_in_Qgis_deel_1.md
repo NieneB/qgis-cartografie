@@ -216,3 +216,11 @@ Nu zijn de bollen zowel in groote als in kleur aangepast op de data! Het zou er 
 ![](./img/voorbeeld_2.png)
 
 
+7. Probeer nog wat effecten. Kijk goed naar het verschil van effecten en transparantie op de features of op de hele laag!
+
+![](./img/transparant_layer.png)
+![](./img/transparant_feature.png)
+
+8. Wat doen de verschillende blend modes met de kleuren van de cirkel? 
+
+![](./img/blendmodes.jpg)
