@@ -28,3 +28,5 @@ Laten we eens kijken of we deze data toch leuk kunnen laten zien!
 ![](./img/sample_color.png)
 
 11. Klik op Apply. 
+
+12. Probeer zelf nog wat variaties uit met de data en de raster fills! Op internet zijn veel seamless patterns te vinden om een vlak te stijlen met een texture. 
